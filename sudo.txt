@@ -1,0 +1,71 @@
+Player just store life 
+Player class (player.rb)
+    @life = 3
+    reduce life method
+end
+
+Question class: we pass the player as argv, 
+    run the logic, and set the player life by win or loss
+****How to pass it to Game Class****
+
+Question class (question.rb)
+
+
+ def initialize
+      @num1 = rand() 
+      @num2= gen
+  end
+
+  
+    
+     method ask Math function 
+        
+        puts question -> What does #{@num1} plus #{@num2} equal?
+        use  gets.chomp get answer.
+        if answer != @num1 + @num2(total)
+          puts "Seriously? No!"
+          player@life -= 1 --> call player class method to reduce the life
+        elsif answer == @num1 + @num2(total)
+          puts "Yes! You are correct!" 
+      end      
+
+
+Game Class:  
+        run the game , check player life.  and display the result
+        state, and goal 
+        
+Game class (game.rb)
+
+      contractor play1 and 2 in here                 
+
+      Method: function use while loop 
+         question = Question.new 
+
+        playerTurn = Player1
+    
+        call   ###question.ask return true or false
+
+        if playerTurn life == 0
+         puts "#{playerTurn} wins with #{@life} / 3"
+          break
+        else
+          puts "Player1 life vs Player2 life"
+        end
+
+        if playerTurn == Player1
+          turn = Player2 
+          else 
+          turn = Player1
+        end 
+
+end
+
+main.rb 
+ 
+  import player file
+  import game
+  import question
+
+set player 1/2
+new game(player1 and player2)
+call game.start()
